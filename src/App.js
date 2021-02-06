@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Switch, Link, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Planets from "./components/Planets";
+import RandomPlanet from "./components/RandomPlanet";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <nav>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+
+          <li>
+            <Link to="/planets">Planets</Link>
+          </li>
+          <li>
+            <Link to="/RandomPlanet">RandomPlanet</Link>
+          </li>
+        </nav>
       </header>
+
+      <main>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/planets" component={Planets} />
+          <Route path="/RandomPlanet" component={RandomPlanet} />
+        </Switch>
+      </main>
     </div>
   );
 }
