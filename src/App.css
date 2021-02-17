@@ -1,11 +1,11 @@
 /* update css  */
 
-header {
+/* .header {
   background-color: rgb(15, 200, 233);
   padding: 10px;
-}
+} */
 nav {
-	padding: 1em;
+	padding: .3em;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;

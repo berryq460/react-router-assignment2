@@ -16,7 +16,7 @@ function Planets(props) {
     fetchData();
   }, []);
  //use .map to sift through data in an organized fashion by item and index
- 
+ //instructions - in planet componet what 
   return (
     <div>
       <ul>

@@ -5,8 +5,8 @@ import randomData from "../service/FetchRandoData";
 function Home(props) {
   return (
     <div>
-      {console.log(DataDisplay())}
-      {console.log(randomData())}
+      {/* {console.log(DataDisplay())} */}
+      {/* {console.log(randomData())} */}
       <h1>Home</h1>
     </div>
   );

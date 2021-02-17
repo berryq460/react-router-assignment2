@@ -1,36 +1,27 @@
 import "./App.css";
-import { Switch, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, 
+  Switch, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import Planets from "./components/Planets";
 import RandomPlanet from "./components/RandomPlanet";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div>
-      <header>
-        <nav>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-
-          <li>
-            <Link to="/planets">Planets</Link>
-          </li>
-          <li>
-            <Link to="/RandomPlanet">RandomPlanet</Link>
-          </li>
-        </nav>
-      </header>
-
-      <main>
+      <Router>
+      <Header />
+      <main className="app-main">
+             
         <Switch>
-          <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Home} />
           <Route path="/planets" component={Planets} />
-          <Route path="/RandomPlanet" component={RandomPlanet} />
+          <Route path="/randomPlanet" component={RandomPlanet} />
         </Switch>
       </main>
+      </Router>
     </div>
+
   );
 }
-
 export default App;
